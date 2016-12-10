@@ -1,0 +1,418 @@
+/* create by hanchun 2016/12/4*/
+@charset "utf-8";
+/* ==========================================================================
+defule style
+========================================================================== */
+
+*{margin: 0;padding: 0}
+body, div, ul, li, a, p, span, h1, h2, h3, h4, button,input,dl, dt, dd{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+body {
+    background: #fafafa;
+    font-family: "Microsoft Yahei", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+ul, li{
+    /* list-style:none; */
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style-position:inside
+}
+button, input, dt, dd{
+    border: 0;
+    outline: 0;
+}
+h1, h2, h3, h4, dt, dd{
+    font-weight: normal;
+}
+strong{
+    font-weight:bold;
+}
+a:active,
+a:hover {
+    outline: 0;
+    text-decoration: none;
+    color: #ffe114;
+}
+a:link{
+    text-decoration: none;
+    color: #ffe114;
+}
+a:active,a:visited{
+    color: #ffe114;
+}
+.hide{
+    display: none;
+}
+/* ==========================================================================
+globe style
+========================================================================== */
+.toBePaid,
+.main{
+    position: relative;
+    // margin: 5% auto;
+    width: 1200px;
+    height: 670px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background: url('../images/activity-bg.jpg') no-repeat;
+    background-size: 1200px 670px;
+    color: #ffe114;
+    text-align: center;
+    font-size: 40px;
+}
+.main-top {
+    // margin-top: 160px;
+    text-align: center;
+}
+.money,
+.person-count{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+.main .font-box{
+    display: inline-block;
+    font-size: 44px;
+    font-weight: bold;
+    // font-family: 'rizirixiannvfang';
+}
+.main .down-count{
+    margin-top: 40px;
+    line-height: 45px;
+}
+.main .money{
+    margin-top: 5px;
+    // font-family: 'rizirijiannvfang';
+    color: #F32609;
+}
+.main .person-count{
+    margin-top: 5px;
+    color: #F32609;
+}
+.down-count .font-box{
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    // font-family: 'rizirixiannvfang';
+    font-weight: normal;
+    color: #fff;
+    background: url('http://pc.images.activity.xxfgo.com/time.png') no-repeat;
+    background-size: contain;
+}
+.money .font-box{
+    margin-left: 8px;
+    margin-right: 5px;
+    min-width: 200px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 56px;
+    line-height: 56px;
+    background: url('http://pc.images.activity.xxfgo.com/text-bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.person-count .font-box{
+    background-color: #c5230e;
+    margin-left: 8px;
+    margin-right: 5px;
+    min-width: 200px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 56px;
+    line-height: 56px;
+    background: url('http://pc.images.activity.xxfgo.com/text-bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.click-btn{
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 30px;
+    width: 311px;
+    height: 75px;
+    color: #f32609;
+    background: url('http://pc.images.activity.xxfgo.com/bling-click-btn.gif') no-repeat;
+    background-size: 311px 75px;
+}
+.tips{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.mask-close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: url('http://pc.images.activity.xxfgo.com/activity-close-yellow.png') no-repeat;
+    background-size: 20px 20px;
+}
+.mask-close-2{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background: url('http://pc.images.activity.xxfgo.com/activity-close-purple.png') no-repeat;
+    background-size: 20px 20px;
+}
+.form-close{
+    z-index: 40;
+}
+.rule-btn{
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #ffe114;
+}
+.pop-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3,3,3,.5);
+}
+.input-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.input-mask .mask-form{
+    margin-top: 360px;
+}
+.mask-form .form-row{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+}
+.form-row input{
+    margin-right: 30px;
+    width: 210px;
+    height: 58px;
+    padding-left: 30px;
+    line-height: 58px;
+    color: #f32609;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 20px;
+}
+.form-error {
+    position: absolute;
+    left: 34%;
+    font-size: 16px;
+}
+.form-row p{
+    font-size: 14px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */ 
+color: #f32609; 
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+color: #f32609; 
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+color: #f32609; 
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+color: #f32609; 
+} 
+.form-row a{
+    display: inline-block;
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    background: url('http://pc.images.activity.xxfgo.com/click-bg.png') no-repeat;
+    background-size: 150px 60px;
+    color: #f32609;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.form-row a.locked{
+    color: #f07800;
+}
+.rules{
+    position: absolute;
+    margin: 110px 375px;
+    width: 450px;
+    height: 450px;
+    padding-top: 45px;
+    background-color: #ffe114;
+    font-size: 18px; 
+    color: #6311b3;
+    background: url('http://pc.images.activity.xxfgo.com/rule-bg.jpg') no-repeat;
+    background-size :450px 450px;
+}
+.rule1{
+    width: 100%;
+    height: 22px;
+    display: inline-block;
+    background: url('http://pc.images.activity.xxfgo.com/rules-01.png') no-repeat center;
+    background-size: contain;
+}
+.rule2{
+    width: 100%;
+    height: 22px;
+    display: inline-block;
+    background: url('http://pc.images.activity.xxfgo.com/rules-02.png') no-repeat center;
+    background-size: contain;
+}
+.rule3{
+    width: 100%;
+    height: 22px;
+    display: inline-block;
+    background: url('http://pc.images.activity.xxfgo.com/rules-03.png') no-repeat center;
+    background-size: contain;
+}
+.rules div{
+    padding: 5px 50px;
+    text-align: left;
+}
+.rules h4{
+    color: #f00;
+}
+.rules p{
+    font-size: 14px;
+}
+.down-count-text{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    background: url('http://pc.images.activity.xxfgo.com/down-count.png') no-repeat;
+    background-size: 318px 30px;
+    vertical-align: top;
+}
+.day-text{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 10px;
+    background: url('http://pc.images.activity.xxfgo.com/down-count.png') no-repeat -126px 0;
+    background-size: 318px 30px;
+    vertical-align: top;
+}
+.hour-text{
+    background: url('http://pc.images.activity.xxfgo.com/down-count.png') no-repeat -188px 0;
+    background-size: 318px 30px;
+    vertical-align: top;
+}
+.minute-text{
+    background: url('http://pc.images.activity.xxfgo.com/down-count.png') no-repeat -248px 0;
+    background-size: 318px 30px;
+    vertical-align: top;
+}
+.second-text{
+    background: url('http://pc.images.activity.xxfgo.com/down-count.png') no-repeat -306px 0;
+    background-size: 318px 30px;
+    vertical-align: top;
+}
+.money-text{
+    display: inline-block;
+    // width: 3.625rem;
+    height: 56px;
+    line-height: 56px;
+    // margin-top: 0.206667rem;
+    // background: url('http://pc.images.activity.xxfgo.com/money.png') no-repeat;
+    // background-size: contain;
+    // vertical-align: top;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+}
+.person-count-text{
+    display: inline-block;
+    height: 56px;
+    line-height: 56px;
+    // margin-top: 0.206667rem;
+    // background: url('http://pc.images.activity.xxfgo.com/person-count.png') no-repeat;
+    // background-size: contain;
+    // vertical-align: top;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+}
+.red-parket-text{
+    display: inline-block;
+    width: 247px;
+    height: 43px;
+    background: url('http://pc.images.activity.xxfgo.com/text.png') no-repeat;
+    vertical-align: top;
+}
+.person-text{
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-left: 5px;
+    margin-top: 10px;
+    background: url('http://pc.images.activity.xxfgo.com/person.png') no-repeat;
+    background-size: contain;
+    vertical-align: top;
+}
+.billion-text{
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-left: 5px;
+    background: url('http://pc.images.activity.xxfgo.com/billion.png') no-repeat;
+    background-size: contain;
+}
+.toBePaid {
+    background: url('http://pc.images.activity.xxfgo.com/tobepaid.jpg') no-repeat;
+    background-size: 1200px 670px;
+}
+#cnzz_stat_icon_1260946010{
+    display: none;
+}
+.bottom-part{
+    padding-top: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    color:#fff;
+}
+.bottom-part img{
+    width: 210px;
+    height: 210px;
+}
+.parket-text{
+    display: inline-block;
+    margin-left: 10px;
+    width: 150px;
+    height: 41px;
+    background: url('../images/parket-text.png') no-repeat;
+    background-size: contain;
+    vertical-align: bottom;
+}
+.font-img{
+    text-align: center;
+    width: 440px;
+    height: 183px;
+}

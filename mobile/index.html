@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双12活动</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" ></script>
+    <script src="js/flexible.js" type="text/javascript"></script>
+    <script src="js/jquery.downCount.js" type="text/javascript"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> 
+</head>
+<body>
+<!--双12活动弹窗-->
+<div class="activity-mask">
+    <div class="main">
+        <div class="finally-hide">
+            <img class="font-img" src="http://m.images.activity.xxfgo.com/font3999.png" alt="">
+            <div class="person-count">
+                <span class="person-count-text">目前拼团人数为</span><span class="font-box"><span id="personCount">0000</span><span class="person-text"></span></span>
+            </div>
+            <div class="money">
+                <span class="money-text">现在加入可获得</span><span class="font-box"><span id="money">0000</span><span class="billion-text"></span></span>
+            </div>
+        </div>
+        <div class="bottom-part">
+            <p class="big-font">关注公众号<span class="parket-text"></span></p>
+            <img src="http://m.images.activity.xxfgo.com/code-red.png" alt="">
+            <p class="small-font">截图在微信中打开，或搜索[喜相逢汽车服务]公众号</p>
+        </div>
+        <div class="pop-mask hide" id="rule-box">
+            <div class="rules">
+                <div>
+                    <p>拼团抢红包时间：2016.12.09 - 2016.12.11</p>
+                    <p>红包兑换时间：2016.12.12 - 2016.12.21</p>
+                    <p>红包有效期：截止2016.12.31</p>
+                </div>
+                <div>
+                    <h4>拼团活动规则：</h4>
+                    <p>1000人成团，每人获得1000元优惠券</p>
+                    <p>拼团人数达5000人，每人获得1500元优惠券</p>
+                    <p>拼团人数达10000人，每人获得1500元优惠券+价值2499元云镜大礼包</p>
+                </div>
+                <div>
+                    <h4>使用方式及规则：</h4>
+                    <p>1. 优惠券和礼包在提车时向当地门店销售出示短信领取</p>
+                    <p>2. 优惠券仅限购买指定车款（起亚K3，标致301），在提车时使用</p>
+                    <p>3. 优惠券金额分月返还，每月返还500元抵用月供</p>
+                    <p>4. 优惠券不可叠加使用，每辆车提车时仅限使用一张优惠券</p>
+                    <p>5. 优惠券仅限新购车用户使用，不可抵用已购车客户月供</p>
+                </div>
+                <a href="javascript:;" class="mask-close-2 rule-show"></a>
+            </div>
+        </div>
+     <!--    <a href="javascript:;" class="mask-close activity-close"></a> -->
+        <a href="javascript:;" class="rule-btn rule-show">活动细则</a>
+    </div>
+</div>
+<script src="js/index.js" type="text/javascript"></script>
+<script src="../common/common.js" type="text/javascript"></script>
+</body>
+</html>
